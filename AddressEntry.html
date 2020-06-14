@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Enter Address</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="AddressEntry.css">
+</head>
+<body>
+	<div class="container">
+  		<div class="panel panel-primary">
+    		<div class="panel-heading">
+      			<h2 class="panel-title">Add your Address</h2>
+    		</div>
+    	<div class="panel-body">
+      		<input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text" class="form-control">
+      	<div id="address">
+        	<div class="row">
+          		<div class="col-md-6">
+            		<label class="control-label">Street address</label>
+            		<input class="form-control" id="street_number">
+          		</div>
+          		<div class="col-md-6">
+            		<label class="control-label">Route</label>
+            		<input class="form-control" id="route">
+          		</div>
+        	</div>
+        	<div class="row">
+          		<div class="col-md-6">
+            		<label class="control-label">City</label>
+            		<input class="form-control field" id="locality">
+          		</div>
+          		<div class="col-md-6"> 
+            		<label class="control-label">State</label>
+            		<input class="form-control" id="administrative_area_level_1">
+          		</div>
+        	</div>
+        	<div class="row">
+          		<div class="col-md-6">
+            		<label class="control-label">Zip code</label>
+            		<input class="form-control" id="postal_code">
+          		</div>
+          		<div class="col-md-6">
+            		<label class="control-label">Country</label>
+            		<input class="form-control" id="country">
+          		</div>
+        	</div>
+      	</div>
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit">Submit</button>
+</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIRGBYBj730itcBkPylJdLDP-4MExspyc&callback=initMap"
+  	type="text/javascript"></script>
+	<script type="text/javascript" src="AddressEntry.js"></script>
+
+</body>
+</html>
